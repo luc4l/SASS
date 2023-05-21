@@ -7,7 +7,6 @@ div {
     display: flex;
     flex-direction: column;
     gap: 5px;
-    background-color: aqua;
     border: 2px solid $color-primary;
     padding-top: 20px;
     align-items: center;
@@ -33,11 +32,11 @@ div {
                     border: 1px solid $color-tertiary;
                     text-align: center;
 
-                    &:nth-child(odd) {                     /* ODD */
+                    &:nth-child(odd) {                     /* dispari */
                         color: $color-secondary;
                     }
 
-                    &:nth-child(even) {
+                    &:nth-child(even) {                   /* pari */
                         color: $color-primary;
                     }
                 

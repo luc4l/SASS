@@ -2,7 +2,6 @@ div {
   display: flex;
   flex-direction: column;
   gap: 5px;
-  background-color: aqua;
   border: 2px solid red;
   padding-top: 20px;
   align-items: center;
@@ -27,10 +26,10 @@ div section article {
   border: 1px solid green;
   text-align: center;
 }
-div section article:nth-child(odd) { /* ODD */
+div section article:nth-child(odd) { /* dispari */
   color: blue;
 }
-div section article:nth-child(even) {
+div section article:nth-child(even) { /* pari */
   color: red;
 }
 
