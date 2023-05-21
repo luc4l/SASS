@@ -1,1 +1,48 @@
-/*# sourceMappingURL=style.css.map */
+div {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid red;
+}
+div h1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  -webkit-text-decoration: underline blue;
+          text-decoration: underline blue;
+  text-align: center;
+  justify-content: center;
+  margin-top: 15px;
+  color: green;
+}
+div section:first-of-type {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid green;
+  margin: 10px;
+}
+div section:first-of-type article {
+  padding: 20px;
+  border: 1px solid green;
+}
+div section:first-of-type article:nth-child(odd) {
+  color: blue;
+  font-size: 1rem;
+  border-color: green;
+  text-align: center;
+}
+div section:first-of-type article:nth-child(even) {
+  color: red;
+  font-size: 1rem;
+  border-color: green;
+  text-align: center;
+}
+div section:last-of-type {
+  border: 1px solid;
+  margin: 10px;
+  justify-content: center;
+  text-align: center;
+  color: green;
+  font-size: 24px;
+  border-color: blue;
+  text-align: center;
+}/*# sourceMappingURL=style.css.map */

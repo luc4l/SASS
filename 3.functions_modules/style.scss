@@ -1,0 +1,58 @@
+
+@import "var";
+@use "function" as f;
+
+@mixin article-card($color, $border-color, $font-size) {
+    color: $color;
+    font-size: f.calculaterRem($font-size);
+    border-color: $border-color;
+    text-align: center;
+}
+
+
+div {
+    display: flex;
+    flex-direction: column;
+    border: f.calculateRem(2) solid $color-primary;
+
+    h1 {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        text-decoration: underline blue;
+        text-align: center;
+        justify-content: center;
+        margin-top: f.calculateRem(15);
+        color: $color-tertiary;
+    }
+
+    section:first-of-type {
+        display: flex;
+        flex-direction: row;
+        border: f.calculateRem(1) solid $color-tertiary;
+        margin: f.calculateRem(10);
+
+        article {
+            padding: f.calculateRem(20);
+            border: f.calculateRem(1) solid $color-tertiary;
+            
+
+            &:nth-child(odd) {  
+                @include article-card($color-secondary, $color-tertiary, 1rem );
+            }
+
+            &:nth-child(even) {
+                @include article-card($color-primary, $color-tertiary, 1rem)
+            }
+            
+        }
+    }
+
+    section:last-of-type {
+        border: f.calculateRem(1) solid;
+        margin: f.calculateRem(10);
+        justify-content: center;
+        text-align: center;
+            @include article-card($color-tertiary, $color-secondary, f.calculateRem(24))
+    }
+}
